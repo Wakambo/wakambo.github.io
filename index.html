@@ -1,1 +1,355 @@
-<h1>Makende</h1>
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Ambole - Project Management & Digital Excellence</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Load Icons and Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    
+    <script>
+        // Consolidated Tailwind Configuration
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // Using the previous professional dark blue and gold/mustard scheme
+                        "primary": "#0A2342",        // Dark Blue
+                        "primary-accent": "#D4AF37", // Gold/Mustard
+                        "secondary": "#F0F2F5",      // Light Grey for backgrounds
+                        "text-light": "#333333",
+                        "text-dark": "#e0e0e0",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "sans": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        /* General styling for smooth transitions and icons */
+        body {
+            scroll-behavior: smooth;
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* CSS-generated static background for Hero Section */
+        .hero-background {
+            /* Creates a professional radial gradient using the primary color */
+            background: radial-gradient(at 50% 30%, #0A2342, #04101E 100%);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark transition-colors duration-500">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md shadow-lg transition-colors duration-500">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-extrabold text-primary dark:text-primary-accent tracking-wider">
+                JAMES AMBOLE
+            </a>
+            
+            <div id="mobile-menu-toggle" class="sm:hidden cursor-pointer p-2">
+                <span class="material-symbols-outlined text-text-light dark:text-text-dark text-3xl">menu</span>
+            </div>
+
+            <!-- Desktop & Mobile Menu -->
+            <div id="nav-links" class="hidden sm:flex flex-col sm:flex-row gap-6 sm:gap-8 items-center absolute sm:static top-full left-0 w-full sm:w-auto bg-white dark:bg-background-dark sm:bg-transparent sm:dark:bg-transparent p-4 sm:p-0 shadow-lg sm:shadow-none transition-all duration-300">
+                <a href="#home" class="text-lg font-medium hover:text-primary-accent transition-colors duration-200">Home</a>
+                <a href="#expertise" class="text-lg font-medium hover:text-primary-accent transition-colors duration-200">Expertise</a>
+                <a href="#about" class="text-lg font-medium hover:text-primary-accent transition-colors duration-200">Credentials</a>
+                <a href="#contact" class="text-lg font-medium hover:text-primary-accent transition-colors duration-200">Contact</a>
+                <button id="theme-toggle" class="p-2 rounded-full bg-secondary dark:bg-primary hover:scale-105 transition-transform duration-200" aria-label="Toggle theme">
+                    <span class="material-symbols-outlined text-text-light dark:text-white text-xl" id="theme-icon">light_mode</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- I. Hero Section (Now using CSS Gradient for background) -->
+        <section id="home" class="min-h-screen flex items-center justify-center p-4 py-20 relative overflow-hidden hero-background">
+            <div class="container mx-auto text-center max-w-4xl @container">
+                <div class="flex flex-col gap-6 text-white text-left">
+                    <!-- H1 updated to reflect Project Management & Digital Focus -->
+                    <h1 class="text-4xl font-black leading-tight tracking-tighter @[480px]:text-6xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-tighter">
+                        Leading Complex Programs in Project Management and Digital Transformation.
+                    </h1>
+                    <!-- UVP updated to reflect new skills -->
+                    <h2 class="text-primary-accent text-lg font-medium @[480px]:text-xl @[480px]:font-medium">
+                        Focused on Operational Excellence, Scrum Methodology, and Full-Stack Digital Integration.
+                    </h2>
+                    
+                    <p class="text-slate-200 text-base @[480px]:text-lg">
+                        I leverage a unique blend of formal Project Management training and advanced Digital & IT skills (CCNA, Full-Stack Development) to drive continuous improvement and strategic change across organizations.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 mt-10 w-full sm:justify-start">
+                    <a href="#contact" class="flex w-full sm:w-auto min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary-accent text-primary text-base font-bold tracking-wide hover:bg-primary-accent/90 transition-colors duration-300 shadow-xl">
+                        <span class="truncate">Discuss a New Project</span>
+                    </a>
+                    <a href="#expertise" class="flex w-full sm:w-auto min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 border-2 border-white text-white text-base font-bold tracking-wide hover:bg-white/10 transition-colors duration-300">
+                        <span class="truncate">View Core Skills</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- II. Expertise & Skills (Based on KEY CERTIFICATIONS & SKILLS) -->
+        <section id="expertise" class="py-20 bg-secondary dark:bg-background-dark transition-colors duration-500">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-16 text-primary dark:text-primary-accent">
+                    Core Expertise & Technical Skills
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Column 1: Process, Improvement, and Digital -->
+                    <div class="bg-white dark:bg-primary p-8 rounded-xl shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary dark:text-white border-b pb-2">Process & Digital Proficiency</h3>
+                        <p class="text-base leading-relaxed mb-6 text-text-light dark:text-text-dark/90">
+                            Commitment to continuous professional development, leveraging agile methods and modern technology to drive efficiency.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-accent text-2xl mt-1">check_circle</span>
+                                <span class="text-lg text-text-light dark:text-text-dark font-semibold">Process & Improvement:</span>
+                                <span class="text-base text-text-light/90 dark:text-text-dark/90">Operational Excellence Work Out and Kaizen Facilitator, A3 Problem Solving for Continuous Improvement, Scrum: The Basics.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-accent text-2xl mt-1">check_circle</span>
+                                <span class="text-lg text-text-light dark:text-text-dark font-semibold">Digital & ERP:</span>
+                                <span class="text-base text-text-light/90 dark:text-text-dark/90">Digital Transformation in Supply Chains, DevOps Foundations, Full-Stack Web Developer, JavaScript Algorithms and Data Structures, Vue.js Essential Training.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Management and Tools -->
+                    <div class="bg-white dark:bg-primary p-8 rounded-xl shadow-2xl border-t-4 border-primary-accent">
+                        <h3 class="text-2xl font-bold mb-6 text-primary dark:text-white border-b pb-2">Management & Tools</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-accent text-2xl mt-1">auto_graph</span>
+                                <span class="text-lg text-text-light dark:text-text-dark">
+                                    <span class="font-semibold">Management & Strategy:</span> Effectively Leading Digital Transformation, Critical Thinking, Learning Design Thinking: Lead Change in Your Organization, Supply Chain Foundations: Project Management, Introduction to Nokia Change Management.
+                                </span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary-accent text-2xl mt-1">code_blocks</span>
+                                <span class="text-lg text-text-light dark:text-text-dark">
+                                    <span class="font-semibold">Key Tools:</span> Microsoft Project, PowerBI, Git.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- III. About & Credentials (Based on EDUCATION & PROFESSIONAL DEVELOPMENT) -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-16 text-primary dark:text-primary-accent">
+                    Education & Professional Credentials
+                </h2>
+                
+                <div class="grid md:grid-cols-1 gap-12">
+                    <!-- Education & Certifications Timeline -->
+                    <div>
+                        <div class="flex flex-col gap-8">
+                            
+                            <!-- Entry 1: BSc -->
+                            <div class="relative pl-8">
+                                <div class="absolute left-0 top-1 h-full border-l-2 border-primary-accent/50 dark:border-primary-accent/30"></div>
+                                <div class="absolute left-[-9px] top-1 h-5 w-5 rounded-full bg-primary-accent border-4 border-background-light dark:border-background-dark"></div>
+                                <p class="font-bold text-lg text-primary dark:text-white">BSc – Project Planning & Management (2nd Class Honors)</p>
+                                <p class="text-sm text-text-light/70 dark:text-text-dark/70">Moi University (Aug 2011 - Aug 2014)</p>
+                            </div>
+                            <!-- Entry 2: Diploma -->
+                            <div class="relative pl-8">
+                                <div class="absolute left-0 top-1 h-full border-l-2 border-primary-accent/50 dark:border-primary-accent/30"></div>
+                                <div class="absolute left-[-9px] top-1 h-5 w-5 rounded-full bg-primary-accent border-4 border-background-light dark:border-background-dark"></div>
+                                <p class="font-bold text-lg text-primary dark:text-white">Diploma – Project Management</p>
+                                <p class="text-sm text-text-light/70 dark:text-text-dark/70">Kenya Methodist University (Jan 2010 - Dec 2010)</p>
+                            </div>
+                            <!-- Entry 3: CCNA -->
+                            <div class="relative pl-8">
+                                <div class="absolute left-[-9px] top-1 h-5 w-5 rounded-full bg-primary-accent border-4 border-background-light dark:border-background-dark"></div>
+                                <p class="font-bold text-lg text-primary dark:text-white">Cisco Certified Network Associate (CCNA)</p>
+                                <p class="text-sm text-text-light/70 dark:text-text-dark/70">Strathmore Business School (SBS) (Jan 2005 - Aug 2005)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IV. Contact Section (Updated with specific details) -->
+        <section id="contact" class="py-20 bg-primary text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-4 text-primary-accent">
+                    Let's Discuss Your Next Project
+                </h2>
+                <p class="text-center text-lg mb-12 text-white/90">
+                    Reach out directly or use the form below to initiate a conversation about optimizing your operations and digital processes.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Direct Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-primary-accent">Direct Contact</h3>
+                        
+                        <div class="space-y-4 text-lg">
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary-accent text-3xl">mail</span>
+                                <div>
+                                    <p class="font-semibold">Email Address</p>
+                                    <a href="mailto:jamesambole@gmail.com" class="hover:underline">jamesambole@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary-accent text-3xl">call</span>
+                                <div>
+                                    <p class="font-semibold">Phone Number</p>
+                                    <a href="tel:+254722435213" class="hover:underline">+254 722 435 213</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary-accent text-3xl">linkedin</span>
+                                <a href="https://www.linkedin.com/in/jamesambole/" target="_blank" class="font-semibold underline hover:text-primary-accent/80 transition-colors">
+                                    Connect on LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white dark:bg-background-dark p-8 rounded-xl shadow-2xl text-text-light dark:text-text-dark">
+                        <form id="contact-form" class="space-y-6">
+                            <label class="flex flex-col">
+                                <p class="text-base font-medium pb-2 text-primary dark:text-white">Name</p>
+                                <input class="form-input rounded-lg border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800 h-12 px-4 text-base placeholder:text-gray-400 focus:ring-primary-accent focus:border-primary-accent" placeholder="Enter your name" type="text" required>
+                            </label>
+                            <label class="flex flex-col">
+                                <p class="text-base font-medium pb-2 text-primary dark:text-white">Email</p>
+                                <input class="form-input rounded-lg border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800 h-12 px-4 text-base placeholder:text-gray-400 focus:ring-primary-accent focus:border-primary-accent" placeholder="Enter your email" type="email" required>
+                            </label>
+                            <label class="flex flex-col">
+                                <p class="text-base font-medium pb-2 text-primary dark:text-white">Project Details / Message</p>
+                                <textarea class="form-textarea rounded-lg border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800 min-h-36 p-4 text-base placeholder:text-gray-400 focus:ring-primary-accent focus:border-primary-accent" placeholder="Tell me about your project" required></textarea>
+                            </label>
+                            <button type="submit" class="w-full rounded-lg h-12 px-6 bg-primary-accent text-primary text-base font-bold tracking-wide hover:bg-primary-accent/90 transition-colors duration-300 shadow-lg">
+                                Send Message
+                            </button>
+                            <p id="form-message" class="text-center text-sm text-green-600 dark:text-green-400 hidden"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-background-dark border-t border-primary-accent/50 text-white/70 py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; <span id="year"></span> James Ambole. All rights reserved.</p>
+            <p class="mt-2">Project Management & Digital Transformation Specialist</p>
+            <a href="#" class="text-primary-accent hover:underline mt-1 block">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        function updateThemeIcon(isDark) {
+            themeIcon.textContent = isDark ? 'dark_mode' : 'light_mode';
+        }
+
+        // Initial setup based on system or stored preference
+        const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        let isDark = savedTheme === 'dark' || (!savedTheme && isSystemDark);
+
+        if (isDark) {
+            html.classList.add('dark');
+        }
+        updateThemeIcon(isDark);
+
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            if (isDark) {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+            updateThemeIcon(isDark);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            mobileMenuToggle.querySelector('span').textContent = navLinks.classList.contains('hidden') ? 'menu' : 'close';
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!navLinks.classList.contains('hidden')) {
+                    navLinks.classList.add('hidden');
+                    mobileMenuToggle.querySelector('span').textContent = 'menu';
+                }
+            });
+        });
+
+        // Contact Form Submission (Simulated)
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            formMessage.textContent = 'Thank you for your message, James will be in touch soon!';
+            formMessage.classList.remove('hidden');
+            
+            // Clear the form after a simulated successful submission
+            this.reset();
+
+            // Hide the message after a few seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+                formMessage.textContent = '';
+            }, 5000);
+        });
+    </script>
+
+</body>
+</html>
